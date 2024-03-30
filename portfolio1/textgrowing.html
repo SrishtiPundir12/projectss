@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           assignment 23
+        </title>
+        <style>
+            #text{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text">text-growing</div>
+        <script>
+           var fontSize=5;
+           var growing=true;
+           function animateText(){
+            var text=document.getElementById("text");
+                if(growing){
+                    fontSize +=1;
+                text.style.fontSize=fontSize+"pt";
+                if(fontSize>=50){
+                    growing=false;
+                     text.innerHTML="text-shrinking";
+                    text.style.color = "blue";                  
+                    }
+           } else {
+            fontSize-=1;
+            text.style.fontSize=fontSize+"pt";
+            if(fontSize<=5){
+                clearInterval(interval);
+            }
+           }
+        }
+        var interval=setInterval(animateText,100);
+        
+        </script>
+    </body>
+</html>
