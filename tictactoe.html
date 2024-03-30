@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            font-size: 50px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <table id="board">
+        <tr>
+            <td class="cell" onclick="makeMove(0, 0)"></td>
+            <td class="cell" onclick="makeMove(0, 1)"></td>
+            <td class="cell" onclick="makeMove(0, 2)"></td>
+        </tr>
+        <tr>
+            <td class="cell" onclick="makeMove(1, 0)"></td>
+            <td class="cell" onclick="makeMove(1, 1)"></td>
+            <td class="cell" onclick="makeMove(1, 2)"></td>
+        </tr>
+        <tr>
+            <td class="cell" onclick="makeMove(2, 0)"></td>
+            <td class="cell" onclick="makeMove(2, 1)"></td>
+            <td class="cell" onclick="makeMove(2, 2)"></td>
+        </tr>
+    </table>
+    <div id="message"></div>
+
+    <script>
+        var board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+        var currentPlayer = 'X';
+        var gameOver = false;
+
+        function makeMove(row, col) {
+            if (!gameOver && board[row][col] === '') {
+                board[row][col] = currentPlayer;
+                document.getElementById('board').rows[row].cells[col].textContent = currentPlayer;
+                checkWinner();
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            }
+        }
+
+        function checkWinner() {
+            var winConditions = [
+                [[0, 0], [0, 1], [0, 2]], // Row 1
+                [[1, 0], [1, 1], [1, 2]], // Row 2
+                [[2, 0], [2, 1], [2, 2]], // Row 3
+                [[0, 0], [1, 0], [2, 0]], // Column 1
+                [[0, 1], [1, 1], [2, 1]], // Column 2
+                [[0, 2], [1, 2], [2, 2]], // Column 3
+                [[0, 0], [1, 1], [2, 2]], // Diagonal 1
+                [[0, 2], [1, 1], [2, 0]]  // Diagonal 2
+            ];
+            for (var i = 0; i < winConditions.length; i++) {
+                var [[a, b], [c, d], [e, f]] = winConditions[i];
+                if (board[a][b] && board[a][b] === board[c][d] && board[a][b] === board[e][f]) {
+                    document.getElementById('message').textContent = `${currentPlayer} wins!`;
+                    gameOver = true;
+                    break;
+                }
+            }
+            if (!board.flat().includes('') && !gameOver) {
+                document.getElementById('message').textContent = "It's a draw!";
+                gameOver = true;
+            }
+        }
+    </script>
+</body>
+</html>
