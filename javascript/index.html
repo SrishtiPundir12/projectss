@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="myscript.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="elem">
+                <a href="#home" class="ele">Home</a>
+                <a href="#about" class="ele">About & Skills</a>
+                <a href="#Projects" class="ele">Projects</a>
+                <a href="#contacts" class="ele">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="home" class="section1">
+            <div><img class="myimage" src="myimage1.jpg"> </div>
+            <div class="imgtext">
+                <p class="text1 text">Hello,I'm</p>
+                <p class="text2 text">Aditi Raghav</p>
+                <p class="text3 text">Graduate Student</p>
+                <p class="text4 text">at Banasthali Vidyapith pursuing Bachaelors of Technolonolgy in Information
+                    Technology and Innovation with career interest in tech,sports and music. </p>
+                <p class="text5 text">A final year student who is passionate on learning and seeking corporate
+                    experience.Young and matured individual with developed skills and personal attributes that will
+                    support the transition from education to full-time</p>
+                <div class="text5">
+                    <a href="home.html"> <img class="imggithub" src="git.png">Github Profile</a>
+                    <button id="resumeButton">Resume</button>
+                    <script>document.getElementById("resumeButton").addEventListener("click", function () {
+                            window.location.href = "resume.html";
+                        });</script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section2">
+            <hr>
+            <h1 id="about" class="about">About</h1>
+            <div class="container">
+                <div class="box1">
+                    <h2>SCHOOL</h2>
+                    <p>Passed 10th CBSE from
+                        Dewan Public School 2019 </p>
+                    <p>Passed 12th CBSE from
+                        Dewan Public School in 2021</p>
+                </div>
+                <div class="box1">
+                    <h2>BACHELOR OF TECHNNOLOGY</h2>
+                    <p>Pursuing B.Tech. in Information
+                        Technology from
+                        Banasthali Vidyapith
+                        Session: 2021-2025</p>
+                </div>
+            </div>
+            <div class="container">
+
+                <div class="box">
+                    <h2>SKILLS</h2>
+                    <p>
+                    <ol>
+                        <li>HTML(Hypertext Markup Language)
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 90%;">
+                                </div>
+                            </div>
+                        </li><br>
+                        <li>CSS(Cascading Style Sheets)
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 80%;">
+                                </div>
+                            </div>
+                        </li><br>
+                        <li>C/C++
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 85%;">
+                                </div>
+                            </div>
+                        </li><br>
+                        <li>Java
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 70%;">
+                                </div>
+                            </div>
+                        </li><br>
+                        <li>JavaScript
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 70%;">
+                                </div>
+                            </div>
+                        </li><br>
+                        <li>OOPs
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 95%;">
+                                </div>
+                            </div>
+                        </li><br>
+                        <li>DBMS(Database Management System)
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: 80%;">
+                                </div>
+                            </div>
+                        </li><br>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="outerproject">
+            <p class="bold" id="Projects">Projects</p>
+            <div class="projects">
+                <div class="proj">
+                    <a href="timer.html"><img class="himg" src="stop.jpg" alt=""></a>
+                    <p class="projtext">STOPWATCH</p>
+                    <p class="projdesc">A mini-project that involves working with JavaScript to handle timing
+                        functionalities. </p>
+                </div>
+                <div class="proj">
+                    <a href="RegistrationForm.html"><img class="himg" src="reg.png" alt=""></a>
+                    <p class="projtext">REGISTRATION FORM</p>
+                    <p class="projdesc">A web-based document that collects necessary information from individuals
+                        seeking to sign up or join a service, event, organization, or program. </p>
+                </div>
+                <div class="proj">
+                    <a href="banasthali.html"><img class="himg" src="banasthali.png" alt=""></a>
+                    <p class="projtext">UNIVERSITY HOMEPAGE</p>
+                    <p class="projdesc">
+                        A university homepage is the primary web page of an educational institution, providing access to
+                        essential information, resources, and links for students, faculty, staff, and visitors.</p>
+                </div>
+                <div class="proj">
+                    <a href="cardlayout.html"><img class="himg" src="card.png" alt=""></a>
+                    <p class="projtext">CARD LAYOUT</p>
+                    <p class="projdesc">A card layout is a design pattern commonly used in user interfaces, presenting
+                        information or content in individual, self-contained units resembling physical cards, often with
+                        visual elements and succinct text</p>
+                </div>
+            </div>
+        </div>
+        <div class="outerproject">
+            <div id="Projects" class="projects">
+                <div class="proj">
+                    <a href="digitalClock.html"><img class="himg" src="digitalclocl.png" alt=""></a>
+                    <p class="projtext">DIGITAL CLOCK</p>
+                    <p class="projdesc">A digital clock is an electronic timekeeping device that displays the current
+                        time in numerical format, typically using LED, LCD, or other digital display technologies. </p>
+                </div>
+                <div class="proj">
+                    <a href="AditiIWT/home.html"><img class="himg" src="food.png" alt=""></a>
+                    <p class="projtext">FOOD O'CLOCK</p>
+                    <p class="projdesc">A food ordering webpage is an online platform where users can browse menus,
+                        select dishes, and place orders for delivery or pickup from restaurants or food establishments.
+                    </p>
+                </div>
+                <div class="proj">
+                    <a href="project/index.html"><img class="himg" src="amazon.png" alt=""></a>
+                    <p class="projtext">AMAZON HOMEPAGE CLONE</p>
+                    <p class="projdesc">An Amazon homepage clone is a replicated version of the Amazon website
+                        interface, designed to mimic its layout, features using HTML and CSS. </p>
+                </div>
+                <div class="proj">
+                    <a href="tempconv.html"><img class="himg" src="con.png" alt=""></a>
+                    <p class="projtext">TEMPERATURE CONVERTER</p>
+                    <p class="projdesc">A temperature converter is a tool or program that converts values between
+                        different temperature scales, such as Celsius, Fahrenheit, and Kelvin. </p>
+                </div>
+            </div>
+        </div>
+        <div class="outerproject">
+            <div id="Projects" class="projects">
+                <div class="proj">
+                    <a href="morning.html"><img class="himg" src="greeting.jpg" alt=""></a>
+                    <p class="projtext">GREETINGS</p>
+                    <p class="projdesc">A mini project that greets people according to the 24 hour clock.</p>
+                </div>
+                <div class="proj">
+                    <a href="textgrowing.html"><img class="himg" src="text.jpg" alt=""></a>
+                    <p class="projtext">GROWING-SHRINKING TEXT</p>
+                    <p class="projdesc">Text growing-shrinking shows text growing to a particular text size and then
+                        starts shrinking afterwards. </p>
+                </div>
+                <div class="proj">
+                    <a href="tictactoe.html"><img class="himg" src="tic.png" alt=""></a>
+                    <p class="projtext">TIC-TAC-TOE </p>
+                    <p class="projdesc">Tic-tac-toe game where two players take turns marking spaces on a 3x3 grid.
+                        Determine the winner or if the game ends in a draw. </p>
+                </div>
+                <div class="proj">
+                    <a href="calculator.html"><img class="himg" src="calculator.png" alt=""></a>
+                    <p class="projtext">CALCULATOR</p>
+                    <p class="projdesc">A basic calculator application with functions for addition, subtraction,
+                        multiplication, and division. </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="outercontacts">
+            <div id="contacts" class="contacts">
+                <h1>Contact</h1>
+                <form action="#" method="get" onsubmit="return validateForm()">
+                    <label for="fname" class="required">First Name:</label>
+                    <input type="text" id="fname" name="fname">
+                    <span id="fnameError" class="error"></span>
+
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <span id="lnameError" class="error"></span>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <span id="emailError" class="error"></span>
+
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" id="mobile" name="mobile">
+                    <span id="mobileError" class="error"></span>
+
+                    <label for="message">Enter your message or query:</label>
+                    <textarea rows="6" cols="50" id="message" name="message"></textarea>
+                    <span id="messageError" class="error"></span>
+
+                    <!-- <input type="textarea"   rows="6" cols="50"> -->
+
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+        <div class="end"></div>
+    </main>
+</body>
+
+</html>

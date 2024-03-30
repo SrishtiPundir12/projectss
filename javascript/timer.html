@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<style>
+</style>
+<body>
+    <h1 >STOPWATCH</h1>
+     <div id="timer">
+        0 hour:0minutes:0seconds
+     </div>
+     <button onclick="startTimer()" class="btn">START</button>
+     <button onclick="stopTimer()"class="btn2">STOP</button>
+
+     <script>
+        let timeInterval;
+        seconds=0;
+        hours=0;
+        minutes=0;
+        function startTimer(){
+         timeInterval=setInterval(updateTime,1000)
+        }
+        function stopTimer(){
+            clearInterval(timeInterval);
+            
+        }
+        function updateTime(){
+            seconds++;
+            if(seconds>=60){
+                minutes++;
+                seconds=0;
+            }
+            if(minutes>=60){
+                minutes=0;
+                hours++;
+            }
+
+            time=hours + "hr:"+minutes+ "min:"+seconds+"sec";
+            document.getElementById('timer').innerText=time;
+            
+        }
+     </script>
+</body>
+</html>

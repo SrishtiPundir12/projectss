@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt("Enter your name:");
+        var dt = new Date();
+        var hh = dt.getHours();
+        var greeting = "";
+
+        if (hh < 12) {
+            greeting = "Good Morning";
+        } else if (hh >= 12 && hh < 18) {
+            greeting = "Good Afternoon";
+        } else {
+            greeting = "Good Evening";
+        }
+
+        var message = greeting + ", " + name;
+        document.write(message);
+    </script>
+</body>
+</html>

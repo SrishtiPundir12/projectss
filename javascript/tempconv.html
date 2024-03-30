@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversion</title>
+</head>
+<body>
+    <form>
+        <input type="number" name="inputv" onchange="tempconv()">
+        <select name="inputop">
+            <option value="c">celsius</option>
+            <option value="k">Kelvin</option>
+            <option value="f">fahrenheit</option>
+        </select>
+        <br>
+        <input type="number" name="outputv">
+        <select name="outputop">
+            <option value="c">celsius</option>
+            <option value="k">Kelvin</option>
+            <option value="f">fahrenheit</option>
+        </select>
+    </form>
+
+    <script>
+        function tempconv(){
+            var inputv = parseFloat(document.forms[0].elements['inputv'].value);
+            var inputop = document.forms[0].elements['inputop'].value;
+            var outputop = document.forms[0].elements['outputop'].value;
+            var result;
+
+            if(inputop == 'c' && outputop == 'f'){
+                result = (inputv * 9/5) + 32;
+            } else if(inputop == 'f' && outputop == 'c'){
+                result = (inputv - 32) * 5/9;
+            } else if(inputop == 'c' && outputop == 'k'){
+                result = inputv + 273.15;
+            } else if(inputop == 'k' && outputop == 'c'){
+                result = inputv - 273.15;
+            } else {
+                result = inputv;
+            }
+            document.forms[0].elements['outputv'].value = result;
+        }
+    </script>
+</body>
+</html>
